@@ -1,0 +1,20 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Dependencies (if you later add tooling)
+node_modules/
+
+# Build output (if you later add tooling)
+dist/
+build/
+
+# Env files
+.env
+.env.*

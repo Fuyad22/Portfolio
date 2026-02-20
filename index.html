@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal portfolio website" />
+    <title>Portfolio | Your Name</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Homepage">
+          <span class="brand-mark" aria-hidden="true">FH</span>
+          <span class="brand-text">Fuyad Hassan</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          data-nav-toggle
+          aria-controls="site-nav"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" data-nav>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link nav-link--cta" href="#contact">Hire me</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <section id="top" class="hero" aria-label="Introduction">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Hi, I’m</p>
+            <h1 class="hero-title">Fuyad Hassan</h1>
+            <p class="hero-subtitle">
+              Front-end developer focused on building fast, accessible, responsive web experiences.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button" href="#projects">View projects</a>
+              <a class="button button--ghost" href="#contact">Contact</a>
+            </div>
+
+            <dl class="hero-meta" aria-label="Quick facts">
+              <div class="meta-item">
+                <dt>Location</dt>
+                <dd>Dhaka, Bangladesh</dd>
+              </div>
+              <div class="meta-item">
+                <dt>Role</dt>
+                <dd>Web Developer</dd>
+              </div>
+              <div class="meta-item">
+                <dt>Availability</dt>
+                <dd>Open to work</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-card" aria-label="Profile card">
+            <div class="avatar" aria-hidden="true">
+              <span>FH</span>
+            </div>
+            <div class="card-body">
+              <p class="card-title">Build clean UI</p>
+              <p class="card-text">
+                I turn designs into production-ready interfaces using HTML, CSS, and JavaScript.
+              </p>
+              <div class="card-links" aria-label="Social links">
+                <a class="chip" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="chip" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a class="chip" href="#contact">Email</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">About</h2>
+            <p class="section-kicker">A little background and what I like building.</p>
+          </div>
+
+          <div class="two-col">
+            <div class="prose">
+              <p>
+                I’m a developer who enjoys creating websites and web apps that feel simple and
+                intuitive. I care about performance, accessibility, and writing maintainable code.
+              </p>
+              <p>
+                I’m currently interested in modern UI patterns, design systems, and JavaScript
+                tooling.
+              </p>
+            </div>
+
+            <div class="stats" aria-label="Highlights">
+              <div class="stat">
+                <p class="stat-number">10+</p>
+                <p class="stat-label">Projects built</p>
+              </div>
+              <div class="stat">
+                <p class="stat-number">3</p>
+                <p class="stat-label">Core technologies</p>
+              </div>
+              <div class="stat">
+                <p class="stat-number">100%</p>
+                <p class="stat-label">Responsive</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section section--alt">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-kicker">A few things I’ve worked on recently.</p>
+          </div>
+
+          <div class="cards" role="list">
+            <article class="card" role="listitem">
+              <h3 class="card-h">Project One</h3>
+              <p class="card-p">
+                A responsive landing page with clean layout, reusable components, and accessible
+                navigation.
+              </p>
+              <ul class="tags" aria-label="Tech used">
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">JavaScript</li>
+              </ul>
+              <div class="card-cta">
+                <a class="link" href="#" aria-label="Open live demo for Project One">Live</a>
+                <a class="link" href="#" aria-label="Open source code for Project One">Code</a>
+              </div>
+            </article>
+
+            <article class="card" role="listitem">
+              <h3 class="card-h">Project Two</h3>
+              <p class="card-p">
+                A small web app featuring form validation, local storage, and a focus on UX.
+              </p>
+              <ul class="tags" aria-label="Tech used">
+                <li class="tag">JavaScript</li>
+                <li class="tag">LocalStorage</li>
+                <li class="tag">Accessibility</li>
+              </ul>
+              <div class="card-cta">
+                <a class="link" href="#" aria-label="Open live demo for Project Two">Live</a>
+                <a class="link" href="#" aria-label="Open source code for Project Two">Code</a>
+              </div>
+            </article>
+
+            <article class="card" role="listitem">
+              <h3 class="card-h">Project Three</h3>
+              <p class="card-p">
+                A portfolio template with smooth scrolling, mobile nav, and semantic HTML structure.
+              </p>
+              <ul class="tags" aria-label="Tech used">
+                <li class="tag">UI</li>
+                <li class="tag">Responsive</li>
+                <li class="tag">SEO</li>
+              </ul>
+              <div class="card-cta">
+                <a class="link" href="#" aria-label="Open live demo for Project Three">Live</a>
+                <a class="link" href="#" aria-label="Open source code for Project Three">Code</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-kicker">Tools and technologies I use.</p>
+          </div>
+
+          <div class="skills">
+            <div class="skill">
+              <h3 class="skill-h">Front-end</h3>
+              <p class="skill-p">HTML, CSS (Flexbox/Grid), JavaScript (ES6+)</p>
+            </div>
+            <div class="skill">
+              <h3 class="skill-h">UI & Quality</h3>
+              <p class="skill-p">Responsive design, accessibility, performance basics</p>
+            </div>
+            <div class="skill">
+              <h3 class="skill-h">Tools</h3>
+              <p class="skill-p">Git/GitHub, VS Code, browser DevTools</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--alt">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-kicker">Send a message—I'll reply as soon as I can.</p>
+          </div>
+
+          <div class="contact-grid">
+            <form class="form" data-contact-form>
+              <label class="field">
+                <span class="label">Name</span>
+                <input class="input" name="name" autocomplete="name" required />
+              </label>
+
+              <label class="field">
+                <span class="label">Email</span>
+                <input class="input" type="email" name="email" autocomplete="email" required />
+              </label>
+
+              <label class="field">
+                <span class="label">Message</span>
+                <textarea class="textarea" name="message" rows="5" required></textarea>
+              </label>
+
+              <button class="button" type="submit">Send</button>
+              <p class="form-note" data-form-note aria-live="polite"></p>
+            </form>
+
+            <aside class="contact-aside" aria-label="Contact details">
+              <div class="contact-box">
+                <h3 class="contact-h">Email</h3>
+                <p class="contact-p"><a class="link" href="mailto:you@example.com">you@example.com</a></p>
+              </div>
+              <div class="contact-box">
+                <h3 class="contact-h">Social</h3>
+                <p class="contact-p">
+                  <a class="link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+                  <span class="sep" aria-hidden="true">•</span>
+                  <a class="link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+                </p>
+              </div>
+              <div class="contact-box">
+                <h3 class="contact-h">Resume</h3>
+                <p class="contact-p"><a class="link" href="#" aria-label="Add a link to your resume">Add link</a></p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-text">© <span data-year></span> Your Name. All rights reserved.</p>
+        <a class="link" href="#top">Back to top</a>
+      </div>
+    </footer>
+  </body>
+</html>
