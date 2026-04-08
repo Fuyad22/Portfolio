@@ -44,6 +44,29 @@
     });
   }
 
+  // Avatar image (optional) -> fallback initials
+  const avatar = document.querySelector(".avatar");
+  const avatarImg = document.querySelector("[data-avatar-img]");
+
+  const enableAvatarImage = () => {
+    if (!(avatar instanceof HTMLElement)) return;
+    avatar.classList.add("has-image");
+  };
+
+  const disableAvatarImage = () => {
+    if (!(avatar instanceof HTMLElement)) return;
+    avatar.classList.remove("has-image");
+    if (avatarImg instanceof HTMLImageElement) avatarImg.remove();
+  };
+
+  if (avatarImg instanceof HTMLImageElement) {
+    if (avatarImg.complete && avatarImg.naturalWidth > 0) enableAvatarImage();
+    else if (avatarImg.complete) disableAvatarImage();
+
+    avatarImg.addEventListener("load", enableAvatarImage);
+    avatarImg.addEventListener("error", disableAvatarImage);
+  }
+
   // Contact form -> mailto:
   const form = document.querySelector("[data-contact-form]");
   const note = document.querySelector("[data-form-note]");
@@ -56,6 +79,11 @@
   if (form instanceof HTMLFormElement) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+
+      if (!form.reportValidity()) {
+        setNote("Please fix the highlighted fields.");
+        return;
+      }
 
       const formData = new FormData(form);
       const name = String(formData.get("name") ?? "").trim();
@@ -70,8 +98,10 @@
       const subject = encodeURIComponent(`Portfolio message from ${name}`);
       const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
 
-      // Update this email address in index.html too if you change it.
-      const to = "you@example.com";
+      // Pull the destination email from the page (keeps HTML + JS in sync).
+      const mailtoLink = document.querySelector('a[href^="mailto:"]');
+      const href = mailtoLink instanceof HTMLAnchorElement ? mailtoLink.getAttribute("href") : null;
+      const to = href ? href.replace(/^mailto:/, "").split("?")[0] : "you@example.com";
       const mailtoUrl = `mailto:${to}?subject=${subject}&body=${body}`;
 
       setNote("Opening your email app...");

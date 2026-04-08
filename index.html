@@ -3,8 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Personal portfolio website" />
-    <title>Portfolio | Your Name</title>
+    <meta
+      name="description"
+      content="Fuyad Hassan — Front-end developer building fast, accessible, responsive web experiences."
+    />
+    <meta name="author" content="Fuyad Hassan" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta name="color-scheme" content="dark" />
+
+    <meta property="og:title" content="Fuyad Hassan | Portfolio" />
+    <meta
+      property="og:description"
+      content="Front-end developer building fast, accessible, responsive web experiences."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/IMG_0967.JPG" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fuyad Hassan | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Front-end developer building fast, accessible, responsive web experiences."
+    />
+    <meta name="twitter:image" content="assets/IMG_0967.JPG" />
+    <title>Portfolio | Fuyad Hassan</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +35,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
     <link rel="stylesheet" href="css/styles.css" />
     <script defer src="js/main.js"></script>
@@ -80,7 +105,19 @@
 
           <div class="hero-card" aria-label="Profile card">
             <div class="avatar" aria-hidden="true">
-              <span>FH</span>
+              <!-- Optional: set this to your own image (e.g., assets/profile.jpg). -->
+              <img
+                class="avatar-img"
+                src="assets/IMG_0967.JPG"
+                alt=""
+                width="140"
+                height="140"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+                data-avatar-img
+              />
+              <span class="avatar-fallback" data-avatar-fallback>FH</span>
             </div>
             <div class="card-body">
               <p class="card-title">Build clean UI</p>
@@ -88,8 +125,15 @@
                 I turn designs into production-ready interfaces using HTML, CSS, and JavaScript.
               </p>
               <div class="card-links" aria-label="Social links">
-                <a class="chip" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-                <a class="chip" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a class="chip" href="https://github.com/Fuyad22" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a
+                  class="chip"
+                  href="https://www.linkedin.com/in/md-fuyad-hassan-3956b315b"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
                 <a class="chip" href="#contact">Email</a>
               </div>
             </div>
@@ -249,19 +293,30 @@
             <aside class="contact-aside" aria-label="Contact details">
               <div class="contact-box">
                 <h3 class="contact-h">Email</h3>
-                <p class="contact-p"><a class="link" href="mailto:you@example.com">you@example.com</a></p>
+                <p class="contact-p">
+                  <a class="link" href="mailto:fuyadhassanswe@gmail.com">fuyadhassanswe@gmail.com</a>
+                </p>
               </div>
               <div class="contact-box">
                 <h3 class="contact-h">Social</h3>
                 <p class="contact-p">
-                  <a class="link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+                  <a class="link" href="https://github.com/Fuyad22" target="_blank" rel="noopener noreferrer">GitHub</a>
                   <span class="sep" aria-hidden="true">•</span>
-                  <a class="link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+                  <a
+                    class="link"
+                    href="https://www.linkedin.com/in/md-fuyad-hassan-3956b315b"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
                 </p>
               </div>
               <div class="contact-box">
                 <h3 class="contact-h">Resume</h3>
-                <p class="contact-p"><a class="link" href="#" aria-label="Add a link to your resume">Add link</a></p>
+                <p class="contact-p">
+                  <a class="link" href="assets/resume.pdf">Download resume</a>
+                </p>
               </div>
             </aside>
           </div>
@@ -271,7 +326,7 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p class="footer-text">© <span data-year></span> Your Name. All rights reserved.</p>
+        <p class="footer-text">© <span data-year></span> Fuyad Hassan. All rights reserved.</p>
         <a class="link" href="#top">Back to top</a>
       </div>
     </footer>

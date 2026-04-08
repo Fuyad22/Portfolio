@@ -18,7 +18,13 @@ Edit these values in `index.html`:
 - Location / role / availability
 - Project titles + links ("Live" / "Code")
 - Social links (GitHub / LinkedIn)
-- Contact email (`mailto:you@example.com`)
+- Contact email (`mailto:fuyadhassanswe@gmail.com`)
+
+Optional: add a profile photo by setting the avatar `<img src>` in `index.html` to a file in `assets/` (example: `assets/IMG_0967.JPG`).
+
+Optional: change the site icon by editing `assets/favicon.svg`.
+
+Optional: add your resume PDF at `assets/resume.pdf` (the Resume link points there).
 
 Optional: tweak colors in `css/styles.css` under `:root`.
 
